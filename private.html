@@ -89,7 +89,6 @@
       <tr><td>INTERNET</td><td>Google Play Billing only: load products, complete purchases, acknowledge transactions, and restore purchases. Not used for scanning, ads, or analytics.</td></tr>
       <tr><td>FOREGROUND_SERVICE and FOREGROUND_SERVICE_MEDIA_PROCESSING</td><td>Show ongoing progress while image or video compression runs in the background.</td></tr>
       <tr><td>POST_NOTIFICATIONS (Android 13+)</td><td>Display compression task progress in a notification when the service is active.</td></tr>
-      <tr><td>REQUEST_INSTALL_PACKAGES</td><td>When you explicitly choose to install an APK file from the file manager (user-initiated only).</td></tr>
       <tr><td>SET_WALLPAPER</td><td>When you explicitly set an image as your wallpaper from the file browser.</td></tr>
       <tr><td>FileProvider (component)</td><td>Securely share or open files with other apps using content URIs; does not upload data to us.</td></tr>
       <tr><td>Optional root (su) read-only</td><td>If you enable root browsing on a rooted device, the App may run read-only shell commands to list protected paths. Root is optional, off by default, and we do not send root output to any server.</td></tr>
@@ -104,6 +103,7 @@
     <li><strong>Compression:</strong> reads and writes files you select; output stays on your device unless you move or share it.</li>
     <li><strong>Apps list:</strong> uses standard package visibility (launcher apps) to show installed applications and storage impact—no QUERY_ALL_PACKAGES.</li>
     <li><strong>Receive / open files:</strong> if another app sends a file to Photo Cleaner: Storage Sweep, processing happens locally (e.g., save copy).</li>
+    <li><strong>APK files:</strong> you can browse, share, and use <strong>Open with</strong> to hand the file to another app you trust; this app does not request install-package permission and does not install APKs on its own.</li>
   </ul>
 
   <h2 id="purchases">Purchases and Google Play</h2>
